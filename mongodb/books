@@ -1,0 +1,144 @@
+use college
+'switched to db college'
+
+db.books.insertOne({"book_title":"full_stack","Author":"Abcd","Publication":"packt","Edition":2,"Year_of_publication":2014,"ISBN":"978-1-78398-328-5","type":"textbook"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92ccf746498b9b822e12b") }
+db.books.insertOne({"book_title":"java","Author":"qwert","Publication":"javap","Edition":3,"Year_of_publication":2016,"ISBN":"999-1-78398-328-5","type":"textbook"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92ce0746498b9b822e12c") }
+db.books.insertOne({"book_title":"c#","Author":"qwert","Publication":"csharp","Edition":5,"Year_of_publication":2017,"ISBN":"978-1-89090-328-5","type":"Reference"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92cf7746498b9b822e12d") }
+db.books.insertOne({"book_title":"JAVA","Author":"zxcv","Publication":"New_java","Edition":1,"Year_of_publication":2013,"ISBN":"978-1-78398-328-5","type":"textbook"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92d11746498b9b822e12e") }
+db.books.insertOne({"book_title":"ML","Author":"qwert","Publication":"mlp","Edition":4,"Year_of_publication":2015,"ISBN":"978-1-6785-328-5","type":"Refernce"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92d2b746498b9b822e12f") }
+db.books.insertOne({"book_title":"java","Author":"qwert","Publication":"javap","Edition":3,"Year_of_publication":2015,"ISBN":"7890-1-78398-328-5","type":"textbook"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92d3a746498b9b822e130") }
+db.books.insertOne({"book_title":"CN","Author":"zxcv","Publication":"packt","Edition":3,"Year_of_publication":2014,"ISBN":"333-1-78398-328-5","type":"refernce"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92d4a746498b9b822e131") }
+db.books.insertOne({"book_title":"Cloud Computing","Author":"Abcd","Publication":"packt","Edition":6,"Year_of_publication":2015,"ISBN":"978-1-78398-328-5","type":"textbook"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92d5e746498b9b822e132") }
+db.books.insertOne({"book_title":"python","Author":"asdf","Publication":"pythonp","Edition":5,"Year_of_publication":2012,"ISBN":"978-1-78398-328-5","type":"textbook"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92d6c746498b9b822e133") }
+db.books.insertOne({"book_title":"DS","Author":"asdf","Publication":"packt","Edition":3,"Year_of_publication":2016,"ISBN":"978-1-78398-328-5","type":"Reference"});
+{ acknowledged: true,
+  insertedId: ObjectId("61d92d7d746498b9b822e134") }
+  db.books.insertOne({"book_title":"DS","Author":"fghj","Publication":"packt","Edition":1,"Year_of_publication":2012,"ISBN":"978-1-6789-328-5","type":"Reference"});
+  { acknowledged: true,
+    insertedId: ObjectId("61d97cc64bddd51b5f6d9bf9") }
+
+
+-------------------------------------------------------------
+
+1)BOOKS WITH TITLE JAVA OR java
+  db.books.find({"book_title":{$regex:/^java/i}});
+{ _id: ObjectId("61d92ce0746498b9b822e12c"),
+  book_title: 'java',
+  Author: 'qwert',
+  Publication: 'javap',
+  Edition: '3',
+  Year_of_publication: '2016',
+  ISBN: '999-1-78398-328-5',
+  type: 'textbook' }
+{ _id: ObjectId("61d92d11746498b9b822e12e"),
+  book_title: 'JAVA',
+  Author: 'zxcv',
+  Publication: 'New_java',
+  Edition: '1',
+  Year_of_publication: '2013',
+  ISBN: '978-1-78398-328-5',
+  type: 'textbook' }
+{ _id: ObjectId("61d92d3a746498b9b822e130"),
+  book_title: 'java',
+  Author: 'qwert',
+  Publication: 'javap',
+  Edition: '3',
+  Year_of_publication: '2015',
+  ISBN: '7890-1-78398-328-5',
+  type: 'textbook' }
+
+  --------------------------------------------------------------
+
+2)BOOKS WITH TITLE "java" AND YEAR OF PUBLICATION GREATER THAN 2015
+  db.books.find({$and:[{"book_title":"java"},{"Year_of_publication":{$gt:"2015"}}]});
+{ _id: ObjectId("61d92ce0746498b9b822e12c"),
+  book_title: 'java',
+  Author: 'qwert',
+  Publication: 'javap',
+  Edition: '3',
+  Year_of_publication: '2016',
+  ISBN: '999-1-78398-328-5',
+  type: 'textbook' }
+
+-----------------------------------------------------------
+
+3)BOOKS WITH EDITION GREATER 3 AND LESS THAN 4
+  db.books.find({$and:[{"Edition":{$gte:3,$lte:4}}]});
+{ _id: ObjectId("61d92ce0746498b9b822e12c"),
+  book_title: 'java',
+  Author: 'qwert',
+  Publication: 'javap',
+  Edition: 3,
+  Year_of_publication: 2016,
+  ISBN: '999-1-78398-328-5',
+  type: 'textbook' }
+
+{ _id: ObjectId("61d92d2b746498b9b822e12f"),
+  book_title: 'ML',
+  Author: 'qwert',
+  Publication: 'mlp',
+  Edition: 4,
+  Year_of_publication: 2015,
+  ISBN: '978-1-6785-328-5',
+  type: 'Refernce' }
+
+{ _id: ObjectId("61d92d3a746498b9b822e130"),
+  book_title: 'java',
+  Author: 'qwert',
+  Publication: 'javap',
+  Edition: 3,
+  Year_of_publication: 2015,
+  ISBN: '7890-1-78398-328-5',
+  type: 'textbook' }
+
+{ _id: ObjectId("61d92d4a746498b9b822e131"),
+  book_title: 'CN',
+  Author: 'zxcv',
+  Publication: 'packt',
+  Edition: 3,
+  Year_of_publication: 2014,
+  ISBN: '333-1-78398-328-5',
+  type: 'refernce' }
+
+
+{ _id: ObjectId("61d92d7d746498b9b822e134"),
+  book_title: 'DS',
+  Author: 'asdf',
+  Publication: 'packt',
+  Edition: 3,
+  Year_of_publication: 2016,
+  ISBN: '978-1-78398-328-5',
+  type: 'Reference' }
+  {"_id":{"$oid":"61d97cc64bddd51b5f6d9bf9",
+  "book_title":"DS",
+  "Author":"fghj",
+  "Publication":"packt",
+  "Edition":1,"Year_of_publication":2012,
+  "ISBN":"978-1-6789-328-5",
+  "type":"Reference"}}
+
+-----------------------------------------------------------
+
+4)BOOKS WHERE AUTHOR HAS PUBLISHED MORE THAN TWO BOOKS
+db.books.aggregate([{ $group : { _id : "$Author", book_title: { $push: "$book_title" } ,count:{$count:{} } } },{$match:{ count:{$gt:2}} }]);
+{ _id: 'qwert',
+  book_title: [ 'java', 'c#', 'ML', 'java' ],
+  count: 4 }

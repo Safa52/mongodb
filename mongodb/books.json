@@ -1,0 +1,122 @@
+[{
+  "_id": {
+    "$oid": "61d92ccf746498b9b822e12b"
+  },
+  "book_title": "full_stack",
+  "Author": "Abcd",
+  "Publication": "packt",
+  "Edition": 2,
+  "Year_of_publication": 2014,
+  "ISBN": "978-1-78398-328-5",
+  "type": "textbook"
+},{
+  "_id": {
+    "$oid": "61d92ce0746498b9b822e12c"
+  },
+  "book_title": "java",
+  "Author": "qwert",
+  "Publication": "javap",
+  "Edition": 3,
+  "Year_of_publication": 2016,
+  "ISBN": "999-1-78398-328-5",
+  "type": "textbook"
+},{
+  "_id": {
+    "$oid": "61d92cf7746498b9b822e12d"
+  },
+  "book_title": "c#",
+  "Author": "qwert",
+  "Publication": "csharp",
+  "Edition": 5,
+  "Year_of_publication": 2017,
+  "ISBN": "978-1-89090-328-5",
+  "type": "Reference"
+},{
+  "_id": {
+    "$oid": "61d92d11746498b9b822e12e"
+  },
+  "book_title": "JAVA",
+  "Author": "zxcv",
+  "Publication": "New_java",
+  "Edition": 1,
+  "Year_of_publication": 2013,
+  "ISBN": "978-1-78398-328-5",
+  "type": "textbook"
+},{
+  "_id": {
+    "$oid": "61d92d2b746498b9b822e12f"
+  },
+  "book_title": "ML",
+  "Author": "qwert",
+  "Publication": "mlp",
+  "Edition": 4,
+  "Year_of_publication": 2015,
+  "ISBN": "978-1-6785-328-5",
+  "type": "Refernce"
+},{
+  "_id": {
+    "$oid": "61d92d3a746498b9b822e130"
+  },
+  "book_title": "java",
+  "Author": "qwert",
+  "Publication": "javap",
+  "Edition": 3,
+  "Year_of_publication": 2015,
+  "ISBN": "7890-1-78398-328-5",
+  "type": "textbook"
+},{
+  "_id": {
+    "$oid": "61d92d4a746498b9b822e131"
+  },
+  "book_title": "CN",
+  "Author": "zxcv",
+  "Publication": "packt",
+  "Edition": 3,
+  "Year_of_publication": 2014,
+  "ISBN": "333-1-78398-328-5",
+  "type": "refernce"
+},{
+  "_id": {
+    "$oid": "61d92d5e746498b9b822e132"
+  },
+  "book_title": "Cloud Computing",
+  "Author": "Abcd",
+  "Publication": "packt",
+  "Edition": 6,
+  "Year_of_publication": 2015,
+  "ISBN": "978-1-78398-328-5",
+  "type": "textbook"
+},{
+  "_id": {
+    "$oid": "61d92d6c746498b9b822e133"
+  },
+  "book_title": "python",
+  "Author": "asdf",
+  "Publication": "pythonp",
+  "Edition": 5,
+  "Year_of_publication": 2012,
+  "ISBN": "978-1-78398-328-5",
+  "type": "textbook"
+},{
+  "_id": {
+    "$oid": "61d92d7d746498b9b822e134"
+  },
+  "book_title": "DS",
+  "Author": "asdf",
+  "Publication": "packt",
+  "Edition": 3,
+  "Year_of_publication": 2016,
+  "ISBN": "978-1-78398-328-5",
+  "type": "Reference"
+},{
+  "_id": {
+    "$oid": "61d97cc64bddd51b5f6d9bf9"
+  },
+  "book_title": "DS",
+  "Author": "fghj",
+  "Publication": "packt",
+  "Edition": 1,
+  "Year_of_publication": 2012,
+  "ISBN": "978-1-6789-328-5",
+  "type": "Reference"
+}]
